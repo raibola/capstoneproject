@@ -1,0 +1,11 @@
+{
+  "name": "capstoneproject",
+  "version": "1.0.0",
+  "description": "a web application for users to order food from Lil's BBQ",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "author": "Raissa Bola",
+  "license": "ISC"
+}
