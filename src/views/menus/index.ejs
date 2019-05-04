@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <main class="container">
+      <% include ../static/partials/navbar.ejs %>
+
+      <h1>Menus</h1>
+
+      <ul class="list-group">
+<!-- #1 -->
+        <% menus.forEach((menu) => { %>
+<!-- #2 -->
+          <li class="list-group-item">
+            <a href="/menus/<%= menu.id %>"> <%= menu.name %> </a>
+            <a href="/menus/<%= menu.id %>"> <%= menu.description %> </a>
+            <a href="/menus/<%= menu.id %>"> <%= menu.price %> </a>
+          </li>
+        <% }) %>
+      </ul>
+
+    </main>
+  </body>
+</html>
