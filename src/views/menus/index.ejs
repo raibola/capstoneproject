@@ -4,22 +4,23 @@
     <% include ../static/partials/head.ejs %>
   </head>
   <body>
-    <main class="container">
+    <main class="container text-center">
       <% include ../static/partials/navbar.ejs %>
 
-      <h1>Menus</h1>
-
-      <ul class="list-group">
+      <h1>Menu</h1>
+      <a href="/menu/new" class="btn btn-success">Add a new menu Item</a>
 <!-- #1 -->
-        <% menus.forEach((menu) => { %>
 <!-- #2 -->
-          <li class="list-group-item">
-            <a href="/menus/<%= menu.id %>"> <%= menu.name %> </a>
-            <a href="/menus/<%= menu.id %>"> <%= menu.description %> </a>
-            <a href="/menus/<%= menu.id %>"> <%= menu.price %> </a>
-          </li>
-        <% }) %>
-      </ul>
+<div class="row text-center">
+    <% menus.forEach((menu) => { %>
+  <div class="col-sm-4" id="divmenu"><img src="<%= menu.imgsrc %>" class="img-responsive" style="width:100%" alt="Image" width="200" height="300">
+  <a href="/menu/<%= menu.id %>"> <%= menu.name %></a>
+  <p><%= menu.description %></p>
+  <p>$<%= menu.price %>.00</p>
+  </div>
+  <% }) %>
+
+</div>
 
     </main>
   </body>

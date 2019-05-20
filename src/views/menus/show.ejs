@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+      <h1><%= menu.name %></h1>
+      <a href="/menu/<%= menu.id %>/edit" class="btn btn-warning">Edit</a>
+      <form style="display:initial" action="/menu/<%= menu.id %>/destroy" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      <p><img src="<%= menu.imgsrc %>" class="img-responsive" alt="Image" width="300" height="200"></p>
+      <p>Description: <%= menu.description %></p>
+      <p>Price: $<%= menu.price %></p>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>
